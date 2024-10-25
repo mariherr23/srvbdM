@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Agregar Dentista</title>
+
+    <script type="module" src="lib/js/submitForm.js"></script>
+    <script type="module" src="lib/js/muestraError.js"></script>
+
+</head>
+
+<body>
+
+    <form onsubmit="submitForm('srv/dentista-agrega.php', event)
+        .then(modelo => location.href = 'index.html')
+        .catch(muestraError)">
+
+        <h1>Agregar Dentista</h1>
+
+        <p><a href="index.html">Cancelar</a></p>
+
+        <p>
+            <label>
+                Nombre *
+                <input name="nombre" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Apellido Paterno *
+                <input name="apellidoP" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Apellido Materno *
+                <input name="apellidoM" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Cédula *
+                <input name="cedula" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Especialidad *
+                <input name="especialidad" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Teléfono *
+                <input name="telefono" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Descripción
+                <textarea name="descripcion"></textarea>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Usuario *
+                <input name="usuario" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Correo *
+                <input name="correo" type="email" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Contraseña *
+                <input name="contraseña" type="password" required>
+            </label>
+        </p>
+
+        <p>* Campos obligatorios</p>
+
+        <p><button type="submit">Agregar</button></p>
+
+    </form>
+
+</body>
+
+</html>
